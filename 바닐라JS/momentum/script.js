@@ -1,31 +1,26 @@
 "use strict";
-//document로 HTML의 element에 접근하고 조작하기
+// events와 연동 연습
 
-document // script가 작동되는 Html 문서
-// console.dir(document); // html 문서를 object 형태로 보여줌
-// .dir 대신 .log 입력: 그냥 코드만 보여줌
+const Headline = document.querySelector(".foo");
 
-document.title = "Momentum Clone"; // html의 내용을 수정 가능
+function HeadlineClick(){
+    console.log("You've clicked the Headline!");
+}
 
-//예시 코드 몇 개
-document.body  
-document.location 
+Headline.addEventListener("click", HeadlineClick);
+// click 이벤트 발생시에만 HeadlineClick 함수 실행
+// 함수를 인수로 넣을 때 ()쓰지 않도록 유의
 
-// html 내 element grab 하기
-const headline = document.getElementById("Head1"); // html에서 id="Head1"인 요소 불러옴
-console.log(headline);
-headline.innerText = "change!";
+function ChangeColor(){
+    Headline.style.color = "blue";  // 선택한 요소 색깔 바꾸기 --> 이 경우 .CSS를 통하지 않고 style을 직접 바꿔준 것 
+}
+function ResetColor(){
+    Headline.style.color = "";  
+}
 
-const classFoo = document.getElementsByClassName("foo");
-console.log(classFoo);
+// event를 주는 두 가지 방법
+Headline.addEventListener("mouseenter", ChangeColor)
+Headline.onmouseleave = ResetColor; // same as: Headline.addEventListener("mouseleave", ResetColor)
 
-const tagName = document.getElementsByTagName("h1");
-console.log(tagName);
 
-// element grab 추천 함수: querySelector(), querySelectorAll():
-// css selector와 동일 방식 ex)
-    // document.querySelector("tagname(부모태그) tagname(자식태그)") or
-    // document.querySelector(".classname tagname:pseudo-class") or
-    // document.querySelector("#id")
-// --> 조건에 맞는 첫 번째 요소만 return함
 
