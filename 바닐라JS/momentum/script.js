@@ -1,14 +1,21 @@
 "use strict";
 const loginForm = document.getElementById("login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button"); 
+const loginButton = document.querySelector("#login-form button");
+const greeting = document.querySelector("#greeting")
+const HIDDEN_CLASSNAME = "hidden"; //string을 저장할 때 사용하는 변수는 전체 대문자snakecase로 표기하는게 관행
 
-function preventRefresh(event){ // event에 발생한 이벤트 관련 정보가 object 형태로 정리됨
-    event.preventDefault(); // 이벤트와 연동된 브라우저 기본동작 중지 
-    console.dir(event) // 확인하면 defaultPrevented: true로 되어 있음
-    alert(loginInput.value)
-    console.log(event)
+function receiveUsername(event){
+    const username = loginInput.value; //username은 함수의 지역변수로 써야 작동
+    event.preventDefault();
+    localStorage.setItem("username", username) //"변수이름(key)", 변수(value)
+    //username을 브라우저에 저장
+    greeting.innerText = `Have a good day, ${username}!` 
+    //입력받은 값(username)을  h1 안에 넣기
+    //이 경우엔 innerText 대신 innerHTML을 써도 작동하는데 둘의 차이는 
+    //https://hianna.tistory.com/480 참조 
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 } 
 
-loginForm.addEventListener("submit", preventRefresh)
-// 여기서 의도한 동작을 하려면 object을 loginForm으로 설정해야 함!
+loginForm.addEventListener("submit", receiveUsername)
