@@ -14,12 +14,10 @@ const backgroundimgs = [
 ]
 
 const body = document.querySelector("body");
-const background = document.createElement("img");
 
 function setRandomBackground(){
     const selectedBg = backgroundimgs[Math.floor(Math.random()*backgroundimgs.length)]
-    background.src = `./${selectedBg})`
-    body.prepend(background)
+    body.style.backgroundImage = `url(src/${selectedBg})`
 }
 
 setRandomBackground();
