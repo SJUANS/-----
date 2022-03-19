@@ -57,5 +57,4 @@ if (savedUserName !== null){
 } else {
     greetUser.innerText = "Hello, stranger. What can I call you?"
     greetingForm.classList.remove(CLASSNAME_HIDDEN);
-    saveNewUserName()
 }
