@@ -1,17 +1,13 @@
 function clock(){
-    const today = new Date
+    const today = new Date;
     const time = document.getElementById("clock-time")
     const date = document.getElementById("clock-date")
-
-    const year = today.getFullYear();
-    const month = today.getMonth();
-    const day = today.getDay();
 
     const hour = String(today.getHours()).padStart(2,"0");
     const minute = String(today.getMinutes()).padStart(2,"0");
     const second = String(today.getSeconds()).padStart(2,"0");
 
-date.innerText = `${month}/${day}/${year}`;
+date.innerText = `${today}`;
 time.innerText = `${hour}:${minute}:${second}`;
 }
 clock();

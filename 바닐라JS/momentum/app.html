@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="src/style.css"/>
 </head>
 <body>
-    <h4 id="clock-date">mm/dd/yyyy</h4>
-    <h1 id="clock-time">00:00:00</h1>
-    <form>
-        <h2>Hello, stranger. What can I call you?</h2>
-        <input type="text"/>
-        <button id="submitbtn_username" type="submit"></button>    
-    </form>
+    <div id="main">
+        <h4 id="clock-date" style="font-size: 20px;">mm/dd/yyyy</h4>
+        <h1 id="clock-time" style="font-size: 50px;">00:00:00</h1>
+        <form id="greeting_form" class="hidden">
+            <h2 id="greeting_message" style="font-size: 30px;">Hello, stranger. What can I call you?</h2>
+            <input id="input_username" type="text" style="font-size: 30px; text-align: center;"/>
+            <button id="submitbtn_username" class="hidden" type="submit"></button>    
+        </form>
+        <button id="forget_me" class="hidden">Delete my name</button>
+    </div>    
 <script src="src/clock.js"></script>
 <script src="src/greetings.js"></script>
 <script src="src/randombackground.js"></script>

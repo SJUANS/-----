@@ -1,3 +1,21 @@
-#submitbtn_username{
+body { 
+    margin: 0;
+}
+
+.hidden{
     display: none;
+}
+
+#main {
+    display: block;
+    width: 800px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+#forget_me {
+    background-color: transparent;
+    border: 0px;
 }
