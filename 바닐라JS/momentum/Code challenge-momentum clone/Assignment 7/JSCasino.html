@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla Challenge</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="Casinostyle.css">
+  </head>
+
+  <body>
+    <h1 class="headline" style="font-size:50px;">Random Number Game</h1>
+    <form id="numberForm">
+      <h1 id="generatenumber">Generate a number between 0 and 
+        <input type="number" min="0" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; width:200px; height: 25px;" required>
+      </h1>
+      <h2 id="guessnumber" style="font-weight:300;">Guess the number:
+        <input type="number" min="0" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; width:200px; height: 25px;" required>
+        <button type="submit" style="font-family:Arial, Helvetica, sans-serif; font-size: 19px;">Play!</button>
+      </h2>
+    </form>
+    <h2 id="chosennumbers" style="font-weight:300"></h2>
+    <h2 id="result"></h2>
+    <script src="index.js"></script>
+  </body>
+</html>
