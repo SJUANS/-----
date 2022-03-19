@@ -1,16 +1,16 @@
 const backgroundimgs = [
-    "src/bgimgs/1.jpg",
-    "src/bgimgs/2.jpg",
-    "src/bgimgs/3.jpg",
-    "src/bgimgs/4.jpg",
-    "src/bgimgs/5.jpg",
-    "src/bgimgs/6.jpg",
-    "src/bgimgs/7.jpg",
-    "src/bgimgs/8.jpg",
-    "src/bgimgs/9.jpg",
-    "src/bgimgs/10.jpg",
-    "src/bgimgs/11.jpg",
-    "src/bgimgs/12.jpg"
+    "bgimgs/1.jpg",
+    "bgimgs/2.jpg",
+    "bgimgs/3.jpg",
+    "bgimgs/4.jpg",
+    "bgimgs/5.jpg",
+    "bgimgs/6.jpg",
+    "bgimgs/7.jpg",
+    "bgimgs/8.jpg",
+    "bgimgs/9.jpg",
+    "bgimgs/10.jpg",
+    "bgimgs/11.jpg",
+    "bgimgs/12.jpg"
 ]
 
 const body = document.querySelector("body");
@@ -18,7 +18,7 @@ const background = document.createElement("img");
 
 function setRandomBackground(){
     const selectedBg = backgroundimgs[Math.floor(Math.random()*backgroundimgs.length)]
-    background.src = `${selectedBg})`
+    background.src = `./${selectedBg})`
     body.prepend(background)
 }
 
