@@ -3,6 +3,7 @@ const greetingForm = document.getElementById("greeting_form");
 const greetUser = document.getElementById("greeting_message");
 const savedUserName = localStorage.getItem("CurrentUserName");
 const forgetMeBtn = document.getElementById("forget_me");
+const toDoList = document.getElementById("todolist_area");
 
 const greetingMsg = [
     "Have a nice day",
@@ -41,6 +42,7 @@ function deleteUserName(){
     if (forgetMe){
         localStorage.removeItem("CurrentUserName");
         forgetMeBtn.classList.add(CLASSNAME_HIDDEN);
+        toDoList.classList.add(CLASSNAME_HIDDEN);
         greetUser.innerText = "Hope to see you again soon. Take care!"
     }
 }
@@ -54,6 +56,7 @@ if (savedUserName !== null){
     greetingForm.classList.remove(CLASSNAME_HIDDEN);
     inputUserName.classList.add(CLASSNAME_HIDDEN);
     forgetMeBtn.classList.remove(CLASSNAME_HIDDEN);
+    toDoList.classList.remove(CLASSNAME_HIDDEN);
 } else {
     greetUser.innerText = "Hello, stranger. What can I call you?"
     greetingForm.classList.remove(CLASSNAME_HIDDEN);
