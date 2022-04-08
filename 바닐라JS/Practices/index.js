@@ -1,21 +1,49 @@
-const firstBtn = document.getElementById("first");
-const lastBtn = document.getElementById("last");
-let text = document.querySelector("h2")
-
-//선언식 함수
-function imFunction1() {
-  text.innerText = "나는 선언식 함수"
+//조건문 연습
+function condition1(){
+  let sum = 2+2
+  if (sum === 4){
+    console.log("true")
+  } else {
+    console.log("false")
+  }
 }
 
-//표현식 함수
-let imFunction2 = function(){
-  text.innerText = "나는 표현식 함수"
-};
+condition1();
 
-firstBtn.onclick = imFunction1;
-lastBtn.onclick = imFunction2;
+function condition2(){
+  let sum = 2+2
+  if (sum !== 4){
+    console.log("true")
+  } else {
+    console.log("false")
+  }
+}
 
-// eventhandler에 등록하는 함수는 ()빼고 쓰자!!!!
+condition2();
 
-console.log(imFunction1)
-// (이벤트리스너(핸들러)를 등록할 때 제외) 함수 이름 끝에 ()를 붙이지 않으면 함수 그 자체를 반환하게 된다 
+function condition3(){
+  if (3 > 4){
+    console.log("true")
+  } else {
+    console.log("false")
+  }
+}
+
+condition3();
+
+const rightVar = 3;
+let nullVar = null;
+var imVariable;
+
+function isVariable(variable){
+  if (variable){
+    console.log(`That variable(value:${variable}) does exist!`)
+  } else {
+    console.log(`That variable(value:${variable}) doesn't exist.`)
+  }
+}
+
+isVariable(rightVar);
+isVariable(nullVar);
+isVariable(imVariable); //undefined(값을 할당하지 않음)인 경우 false로 인정되어 두 번째 블록 실행
+isVariable(noVar); //선언되지 않은 변수: error 출력
