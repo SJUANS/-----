@@ -41,9 +41,9 @@ function isVariable(){
   for (i = 0; i < varArray.length; i++){
     let variable = varArray[i];
     if (variable){
-      console.log(`No.${i} variable(value:${variable}) is valid!`)
+      console.log(`No.${i} variable(value:${variable}) is true!`)
     } else {
-      console.log(`No.${i} variable(value:${variable}) isn't valid.`)
+      console.log(`No.${i} variable(value:${variable}) is false.`)
     }
   } 
 }
